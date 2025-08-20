@@ -1,0 +1,49 @@
+/* src/components/Home.css */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: #f8fafc;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .intro {
+    max-width: 600px;
+  }
+  
+  .highlight {
+    color: #facc15;
+    font-weight: bold;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: #94a3b8;
+  }
+  
+  .description {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #facc15;
+    color: #0f172a;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease-out,  background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #fde047;
+    transform: scale(1.04);
+  }
