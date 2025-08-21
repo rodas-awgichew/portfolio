@@ -6,19 +6,19 @@ const testimonials = [
     name: 'Selam T.',
     role: 'Health Advocate',
     quote: 'FEMA is more than an app—it’s a lifeline. Rodas’s design makes health education feel empowering and accessible.',
-    image: '/mypic.jpg'
+    image: '/pic1.jpg'
   },
   {
     name: 'Daniel M.',
     role: 'Startup Founder',
     quote: 'Working with Rodas was seamless. Her attention to detail and user empathy made our product shine.',
-    image: '/logo192.png'
+    image: '/pic1.jpg'
   },
   {
     name: 'Liya A.',
     role: 'UX Mentor',
     quote: 'Rodas brings clarity, creativity, and purpose to every interface she touches. Her growth is inspiring.',
-    image: '/logo192.png'
+    image: '/pic1.jpg'
   }
 ];
 

@@ -1,5 +1,5 @@
 .testimonial {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     background-color: #f8fafc;
     color: #1e293b;
   }
@@ -18,12 +18,13 @@
   }
   
   .testimonial-card {
-    background: white;
+    background: #1e293b;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     text-align: center;
     transition: transform 0.3s ease;
+    color:#f8fafc;
   }
   
   .testimonial-card:hover {
@@ -41,7 +42,7 @@
   .quote {
     font-style: italic;
     margin-bottom: 1rem;
-    color: #475569;
+    color:#f8fafc;
   }
   
   .testimonial-card h3 {
@@ -51,5 +52,5 @@
   
   .role {
     font-size: 0.9rem;
-    color: #64748b;
+    
   }

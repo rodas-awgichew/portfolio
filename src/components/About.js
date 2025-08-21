@@ -39,8 +39,8 @@ const About = () => {
               <span className="desc">Freelance UI/UX Projects – Web & Mobile</span>
             </li>
             <li>
-              <span className="date">2020–2022</span>
-              <span className="desc">Front-End Development Training & Portfolio Building</span>
+              <span className="date">2023–2024</span>
+              <span className="desc">Front-End Development Training </span>
             </li>
           </ul>
         </div>
