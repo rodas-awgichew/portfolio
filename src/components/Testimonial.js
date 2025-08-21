@@ -6,7 +6,7 @@ const testimonials = [
     name: 'Selam T.',
     role: 'Health Advocate',
     quote: 'FEMA is more than an app—it’s a lifeline. Rodas’s design makes health education feel empowering and accessible.',
-    image: '/pic1.jpg'
+    image: '/mypic.jpg'
   },
   {
     name: 'Daniel M.',
