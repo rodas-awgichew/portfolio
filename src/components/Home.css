@@ -8,7 +8,19 @@
     color: #f8fafc;
     min-height: 100vh;
     text-align: center;
+    animation: slide 0.9s ease-out;
   }
+  @keyframes slide {
+    0% {
+      transform: translatey(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
   
   .intro {
     max-width: 600px;

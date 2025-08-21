@@ -19,7 +19,7 @@ const Header = () => {
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li><a href="#home" onClick={toggleMenu}>Home</a></li>
           <li><a href="#about" onClick={toggleMenu}>About</a></li>
-          <li><a href="#project" onClick={toggleMenu}>project</a></li>
+          <li><a href="#projects" onClick={toggleMenu}>project</a></li>
           <li><a href="#testimonial" onClick={toggleMenu}>Testimonial</a></li>
           <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
         </ul>

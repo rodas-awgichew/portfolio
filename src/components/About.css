@@ -3,6 +3,21 @@
     background-color: #f8fafc;
     color: #0f172a;
   }
+  @keyframes flow {
+    0% {
+      transform: translatex(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .about {
+    animation: flow 0.8s ease-out;
+  }
+  
   
   .about-content {
     max-width: 900px;

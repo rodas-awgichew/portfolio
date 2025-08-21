@@ -24,7 +24,7 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <section className="testimonial">
+    <section className="testimonial" id='testimonial'>
       <h2>Testimonials</h2>
       <div className="testimonial-grid">
         {testimonials.map((t, index) => (
