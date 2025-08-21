@@ -1,0 +1,96 @@
+.about {
+    padding: 4rem 2rem;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+  
+  .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #94a3b8;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+  }
+  
+  .skills {
+    margin-top: 2rem;
+  }
+  
+  .icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .icon-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .timeline {
+    margin-top: 2rem;
+  }
+  
+  .timeline ul {
+    list-style: none;
+    padding-left: 0;
+    border-left: 2px solid #94a3b8;
+    margin-left: 1rem;
+  }
+  
+  .timeline li {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #1e293b;
+    border-radius: 50%;
+  }
+  
+  .date {
+    font-weight: bold;
+    color: #475569;
+  }
+  
+  .desc {
+    display: block;
+    margin-top: 0.3rem;
+  }
