@@ -45,21 +45,12 @@ Welcome to the **Portfolio** repository! This project serves as a showcase of my
 4. **Open in your browser:**  
    Visit `http://localhost:3000` to view the portfolio locally.
 
-## Customization
-
-- Update the `src/data/projects.js` (or similar) file to add or remove projects.
-- Modify personal information and bio in the relevant component or configuration file.
-- Adjust styling in the CSS/Sass files or Tailwind config.
 
 ## Contributing
 
 This portfolio is personalized, but suggestions and improvements are welcome! Feel free to open an issue or submit a pull request.
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 **Contact:**  
-For questions or collaboration opportunities, reach out via the contact form or email listed in the About section.
+For questions or collaboration opportunities, reach out via the contact form or email (rodas.awgichew21@gmail.com).
