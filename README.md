@@ -28,23 +28,6 @@ Welcome to the **Portfolio** repository! This project serves as a showcase of my
 - **Deployment:**  
   - Vercel
 
-## Getting Started
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/rodas-awgichew/portfolio.git
-   ```
-2. **Install dependencies (if applicable):**
-   ```bash
-   npm install
-   ```
-3. **Run the development server:**
-   ```bash
-   npm start
-   ```
-4. **Open in your browser:**  
-   Visit `http://localhost:3000` to view the portfolio locally.
-
 
 ## Contributing
 
