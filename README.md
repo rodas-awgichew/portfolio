@@ -21,10 +21,6 @@ Welcome to the **Portfolio** repository! This project serves as a showcase of my
   - JavaScript (ES6+)  
   - React.js 
 
-
-- **Form Handling:**  
-  - Formspree (for contact form integration)
-
 - **Deployment:**  
   - Vercel
 
