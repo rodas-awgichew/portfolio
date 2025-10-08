@@ -17,7 +17,7 @@ Welcome to the **Portfolio** repository! This project serves as a showcase of my
 
 - **Frontend:**  
   - HTML5  
-  - CSS3 / Sass  
+  - CSS3  
   - JavaScript (ES6+)  
   - React.js 
 
