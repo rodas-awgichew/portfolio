@@ -8,6 +8,9 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  top:0;
+  margin-top: -90px;
+  scroll-margin-top: 70px;
 }
 
 .home-content {
@@ -85,7 +88,7 @@
   animation: float 8s infinite ease-in-out;
 }
 
-.react { top: 10%; left: 15%; color: #38bdf8; }
+.react { top: 20%; left: 15%; color: #38bdf8; }
 .next { top: 15%; right: 20%; color: #fff; }
 .tailwind { bottom: 10%; left: 25%; color: #38bdf8; }
 .ts { bottom: 15%; right: 15%; color: #007acc; }
