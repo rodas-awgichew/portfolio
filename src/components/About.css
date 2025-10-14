@@ -1,111 +1,164 @@
-.about {
-    padding: 4rem 2rem;
-    background-color: #f8fafc;
-    color: #0f172a;
-  }
-  @keyframes flow {
-    0% {
-      transform: translatex(20px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+.about-section {
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  animation: floatText 1.2s ease-out forwards;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f8fafc;
+}
+
+.highlight {
+  color: #38bdf8;
+}
+
+.about-description {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  color: #93c5fd;
+  font-weight: 500;
+}
+
+.contact-info p {
+  margin: 0.3rem 0;
+  color: #f1f5f9;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-btn {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.contact-btn:hover {
+  background: #7dd3fc;
+}
+
+.resume-btn {
+  border: 2px solid #38bdf8;
   
-  .about {
-    animation: flow 0.8s ease-out;
+  color: #0f172a;
+}
+
+.resume-btn:hover {
+  background: #7dd3fc;
+  color: #0f172a;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: floatImage 1.5s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
   }
-  
-  
-  .about-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
+
+  .about-buttons {
+    justify-content: center;
   }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #1e293b;
+
+  .image-wrapper img {
+    max-width: 300px;
   }
-  
-  .profile {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+}
+
+/* ===== Floating Animation ===== */
+@keyframes floatText {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #94a3b8;
+  50% {
+    opacity: 1;
+    transform: translateY(-5px);
   }
-  
-  .intro {
-    font-size: 1.1rem;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .skills {
-    margin-top: 2rem;
+}
+
+@keyframes floatImage {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
   }
-  
-  .icon-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
-    padding-left: 0;
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
   }
-  
-  .icon-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #e2e8f0;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-weight: 500;
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
-  
-  .timeline {
-    margin-top: 2rem;
-  }
-  
-  .timeline ul {
-    list-style: none;
-    padding-left: 0;
-    border-left: 2px solid #94a3b8;
-    margin-left: 1rem;
-  }
-  
-  .timeline li {
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    position: relative;
-  }
-  
-  .timeline li::before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 5px;
-    width: 10px;
-    height: 10px;
-    background-color: #1e293b;
-    border-radius: 50%;
-  }
-  
-  .date {
-    font-weight: bold;
-    color: #475569;
-  }
-  
-  .desc {
-    display: block;
-    margin-top: 0.3rem;
-  }
+}
