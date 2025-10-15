@@ -1,70 +1,70 @@
-import React from 'react';
-import './Projects.css';
+import React from "react";
+import "./Projects.css";
 
 const Projects = () => {
   const projectList = [
     {
-      img: '/fema.png',
-      title: 'FEMA Health Companion',
-      description: 'Empowering women through education, early screening, and personalized health insights.',
-      tech: ['React', 'Tailwind CSS', 'API Integration'],
-      link: 'https://real-state-landing-page-henna.vercel.app/'
+      img: "/fema.png",
+      title: "FEMA Health Companion",
+      description:
+        "Empowering women through education, early screening, and personalized health insights.",
+      link: "https://luna-health-349o3k7dg-sadorras-projects.vercel.app/",
     },
     {
-      img: '/movieApp.png',
-      title: 'Movie App',
-      description: 'Practice project for dynamic rendering, API fetching, and error handling.',
-      tech: ['React', 'JavaScript', 'TMDB API'],
-      link: 'https://incandescent-kleicha-b50105.netlify.app/'
+      img: "/movieApp.png",
+      title: "Movie Explorer",
+      description:
+        "Dynamic movie browsing with API integration and real-time search.",
+      link: "https://movie-app-beryl-eight-59.vercel.app/",
     },
     {
-      img: '/portfolio.png',
-      title: 'Portfolio Site',
-      description: 'Creative showcase of UI/UX skills, animations, and responsive design.',
-      tech: ['Javasript', 'Framer Motion', 'CSS Modules'],
-      link: 'https://rodas-portfoliowebsite.netlify.app/'
+      img: "/real_state.png",
+      title: "Habesha Maven",
+      description:
+        "Responsive and modern landing page designed for real estate businesses or property listings.",
+      link: "https://real-state-landing-page-henna.vercel.app/",
     },
     {
-      img: '/fema.png',
-      title: 'FEMA Health Companion',
-      description: 'Empowering women through education, early screening, and personalized health insights.',
-      tech: ['React', 'Tailwind CSS', 'API Integration'],
-      link: '#'
+      img: "/buddy.png",
+      title: "GoBuddy",
+      description:
+        "Guide App built to help users discover, contribute, and share guides for places, experiences, or resources easily.",
+      link: "https://rodas-portfoliowebsite.netlify.app/",
     },
+    
     {
-      img: '/movieApp.png',
-      title: 'Realstate landing page',
-      description: 'responsive and modern landing page designed for real estate businesses or property listings.',
-      tech: ['HTML', 'CSS', 'Javascript'],
-      link: '#'
+      img: "/rhythmix.png",
+      title: "Rhythmix",
+      description:
+        "A music app that fetch songs, stream audio, manage playlists, and supports real-time playback, search, and personalized recommendations through secure endpoints.",
+      link: "https://rhythmix-sepia.vercel.app/",
     },
-    {
-      img: '/fema.png',
-      title: 'FEMA Health Companion',
-      description: 'Empowering women through education, early screening, and personalized health insights.',
-      tech: ['React', 'Tailwind CSS', 'API Integration'],
-      link: '#'
-    }
     
   ];
 
   return (
-    <section className="projects" id='projects'>
-      <h2>My Projects</h2>
-      <div className="project-grid">
+    <section className="projects" id="projects">
+      <h2 className="section-title">My Projects</h2>
+      <div className="project-gallery">
         {projectList.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img src={project.img} alt='projects demo'/>
-            <h3>{project.title}</h3>
-            <div className='info'>
-            <p>{project.description}</p>
-            <ul>
-              {project.tech.map((tech, i) => (
-                <li key={i}>{tech}</li>
-              ))}
-            </ul>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
+          <div
+            className={`project-item ${index === 0  | index === 4 ? "featured" : "" | index === 3 ? "featured2" : ""}`}
+            key={index}
+          >
+            <img src={project.img} alt={project.title} className="project-img" />
+            <div className="overlay"></div>
+            <div className="project-info">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="visit-btn"
+              >
+                Visit
+              </a>
+            </div>
           </div>
         ))}
       </div>
