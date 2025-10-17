@@ -1,56 +1,124 @@
 .testimonial {
-    padding: 6rem 2rem;
-    background-color: #f8fafc;
-    color: #1e293b;
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at 30% 30%, #0f172a, #020617);
+  color: #f8fafc;
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonial h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+/* viewport masks overflow and centers track */
+.testimonial-viewport {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* the moving track; duplicated content gives loop */
+.testimonial-track {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  /* The width is intrinsic; we use transform to move it */
+  will-change: transform;
+  animation: scroll-left 28s linear infinite;
+  padding: 1rem 0;
+}
+
+/* Pause the animation by adding .paused (toggled by JS) */
+.testimonial-track.paused {
+  animation-play-state: paused;
+}
+
+/* Card */
+.testimonial-card {
+  flex: 0 0 320px;
+  background: rgba(30, 41, 59, 0.92);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.05);
+  text-align: center;
+  transform: scale(0.94);
+  opacity: 0.6;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1), opacity 500ms;
+  user-select: none;
+}
+
+/* active card - center of attention */
+.testimonial-card.active {
+  transform: scale(1.08);
+  opacity: 1;
+  box-shadow: 0 10px 40px rgba(56, 189, 248, 0.28);
+  background: rgba(30, 41, 59, 1);
+  animation: float 5s ease-in-out infinite;
+}
+
+/* small hover boost */
+.testimonial-card:hover {
+  transform: scale(1.12);
+}
+
+/* floating motion */
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1.08); }
+  50% { transform: translateY(-8px) scale(1.08); }
+}
+
+/* continuous left scroll animation (move by half track width = width of original set) */
+/* Explanation: because we duplicated the items, moving by -50% of the track (approx) loops seamlessly.
+   Using percentages here works best when the duplicated content has identical width to original. */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.testimonial-card img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.18);
+}
+
+.quote {
+  font-style: italic;
+  margin: 1rem 0;
+  color: #cbd5e1;
+}
+
+.testimonial-card h3 {
+  font-size: 1.1rem;
+  margin: 0.4rem 0;
+  color: #38bdf8;
+}
+
+.role {
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonial-track {
+    gap: 1rem;
   }
-  
-  .testimonial h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    font-weight: 700;
-  }
-  
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  
   .testimonial-card {
-    background: #1e293b;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    text-align: center;
-    transition: transform 0.3s ease;
-    color:#f8fafc;
+    flex: 0 0 280px;
+    padding: 1.6rem;
   }
-  
-  .testimonial-card:hover {
-    transform:skew(-2deg) scale(1.07);
+}
+
+@media (max-width: 520px) {
+  .testimonial-card {
+    flex: 0 0 240px;
   }
-  
-  .testimonial-card img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-  
-  .quote {
-    font-style: italic;
-    margin-bottom: 1rem;
-    color:#f8fafc;
-  }
-  
-  .testimonial-card h3 {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-  }
-  
-  .role {
-    font-size: 0.9rem;
-    
-  }
+}
