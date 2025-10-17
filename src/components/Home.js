@@ -13,6 +13,19 @@ const Home = () => {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
+  
+  const handleScrollToAbout = (e) => {
+  e.preventDefault();
+  const aboutSection = document.querySelector('#about');
+
+  // Smooth scroll
+  aboutSection.scrollIntoView({ behavior: 'smooth' });
+
+  // Re-trigger animation
+  aboutSection.classList.remove('animate');
+  void aboutSection.offsetWidth; // trick: forces reflow to restart CSS animation
+  aboutSection.classList.add('animate');
+};
 
   useEffect(() => {
     if (index === texts.length) return;
@@ -79,8 +92,11 @@ const Home = () => {
       </div>
 
       <div className="scroll-indicator">
-        <span></span>
-    </div>
+         <a href="#about" onClick={handleScrollToAbout}>
+             <span></span>
+        </a>
+     </div>
+     
     </section>
   );
 };
