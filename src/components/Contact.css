@@ -1,69 +1,137 @@
+/* Outer black background section */
+.contact-section {
+  background-color: #0f172a; /* full black */
+  padding: 8rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner glowing form container */
 .contact {
-    padding: 4rem 2rem;
-    background-color: #f8fafc;
-    color: #1e293b;
-    max-width: 700px;
-    margin: 120px auto;
-    box-shadow: 0 2px 10px #1e293b;
+  background: radial-gradient(circle at 20% 30%, #0f172a, #1e293b);
+  color: #f8fafc;
+  max-width: 750px;
+  width: 100%;
+  padding: 4rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.contact:hover {
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.4);
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact .intro {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.contact-form button {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+  color: #facc15;
+}
+
+/* Smooth fade-up animation */
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate="fade-up"].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Toast message styling */
+.toast {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 3rem 1.5rem;
   }
-  
+
   .contact h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    font-size: 2rem;
   }
-  
-  .contact .intro {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    color: #475569;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .contact-form label {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    border: none;
-    border-bottom: 2px solid #cbd5e1;
-    background-color: transparent;
-    padding: 0.5rem 0;
-    font-size: 1rem;
-    color: #1e293b;
-    transition: border-color 0.3s ease;
-  }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border-bottom: 2px solid #1e293b;
-  }
-  
-  
-  .contact-form button {
-    background-color: #0f172acf;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0f172a;
-    color:#facc15;
-    ;
-  }
+}
