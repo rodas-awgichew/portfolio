@@ -3,18 +3,18 @@ import "./Testimonial.css";
 
 const testimonials = [
   {
-    name: "Selam T.",
+    name: "Sador T.",
     role: "Health Advocate",
     quote:
       "FEMA is more than an app—it’s a lifeline. Rodas’s design makes health education feel empowering and accessible.",
-    image: "/mypic.jpg",
+    image: "/pic6.webp",
   },
   {
     name: "Daniel M.",
     role: "Startup Founder",
     quote:
       "Working with Rodas was seamless. Her attention to detail and user empathy made our product shine.",
-    image: "/pic1.jpg",
+    image: "/pic5.webp",
   },
   {
     name: "Liya A.",
@@ -28,14 +28,14 @@ const testimonials = [
     role: "Software Engineer",
     quote:
       "Her designs balance beauty with usability — truly a professional approach that stands out.",
-    image: "/mypic.jpg",
+    image: "/PIC3.webp",
   },
   {
-    name: "Sara Y.",
+    name: "Biruk Y.",
     role: "Designer",
     quote:
       "She has a rare mix of creativity and precision. Every interface feels intentional and human.",
-    image: "/pic1.jpg",
+    image: "/pic4.webp",
   },
 ];
 
