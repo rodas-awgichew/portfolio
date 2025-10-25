@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 import "./Contact.css";
 
 const Contact = () => {
@@ -20,9 +21,24 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 3000);
-    e.target.reset();
+
+    emailjs
+      .sendForm(
+        "service_aluh0dh",
+        "template_d6xlnqh",
+        e.target,
+        "KEWEJc1fwZ6TTZWTE"
+      )
+      .then(
+        () => {
+          setShowToast(true);
+          setTimeout(() => setShowToast(false), 3000);
+          e.target.reset();
+        },
+        (error) => {
+          alert("Failed to send message: " + error.text);
+        }
+      );
   };
 
   return (
@@ -34,43 +50,20 @@ const Contact = () => {
           work, or just want to say hi — I’d love to hear from you.
         </p>
 
-<form
-  action="https://formspree.io/f/xeoryvve"
-  method="POST"
-  className="contact-form"
-  onSubmit={handleSubmit}
->
+        <form onSubmit={handleSubmit} className="contact-form">
           <div className="input-group">
             <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your name"
-              required
-            />
+            <input type="text" name="name" placeholder="Your name" required />
           </div>
 
           <div className="input-group">
             <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your email"
-              required
-            />
+            <input type="email" name="email" placeholder="Your email" required />
           </div>
 
           <div className="input-group">
             <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Your message"
-              required
-            ></textarea>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
           </div>
 
           <button type="submit">Send Message</button>
