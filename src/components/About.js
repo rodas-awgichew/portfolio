@@ -27,6 +27,30 @@ const About = () => {
     };
   }, []);
 
+  const resumeDocId = '1KZexvDrkUOT5X6wLbtXNyWc0ofv6NGlE';
+  const exportUrl = `https://docs.google.com/document/d/${resumeDocId}/export?format=pdf`;
+
+  const handleDownloadResume = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(exportUrl, { mode: 'cors' });
+      if (!res.ok) throw new Error('Network response was not ok');
+
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Rodas_Awgichew_Resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      // Fallback: open the export URL in a new tab (browser will usually prompt download)
+      window.open(exportUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <section id="about" ref={aboutRef} className="about-section">
       <div className="about-container">
@@ -68,13 +92,17 @@ const About = () => {
 
           <div className="about-buttons">
             <a href="#contact" className="btn contact-btn">Contact Me</a>
-            <a href="/Rodas_Awgichew_Resume.pdf" className="btn resume-btn" target="_blank" rel="noopener noreferrer">
+            <a
+              href={exportUrl}
+              className="btn resume-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleDownloadResume}
+            >
               Download Resume
             </a>
           </div>
         </div>
-
-        
       </div>
     </section>
   );
