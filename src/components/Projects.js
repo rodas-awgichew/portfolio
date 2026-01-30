@@ -29,7 +29,7 @@ const Projects = () => {
       title: "GoBuddy",
       description:
         "Guide App built to help users discover, contribute, and share guides for places, experiences, or resources easily.",
-      link: "https://rodas-portfoliowebsite.netlify.app/",
+      link: "https://guide-app-seven.vercel.app/",
     },
     
     {
