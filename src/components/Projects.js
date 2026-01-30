@@ -18,11 +18,11 @@ const Projects = () => {
       link: "https://movie-app-beryl-eight-59.vercel.app/",
     },
     {
-      img: "/real_state.png",
-      title: "Habesha Maven",
+      img: "/image.png",
+      title: "Crypto",
       description:
-        "Responsive and modern landing page designed for real estate businesses or property listings.",
-      link: "https://real-state-landing-page-henna.vercel.app/",
+        "A modern web application project aimed at revolutionizing digital finance through secure, transparent, and decentralized blockchain solutions.",
+      link: "https://crypto-rho-ochre.vercel.app/",
     },
     {
       img: "/buddy.png",
