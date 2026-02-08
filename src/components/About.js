@@ -28,7 +28,7 @@ const About = () => {
   }, []);
 
   const resumeDocId = '1KZexvDrkUOT5X6wLbtXNyWc0ofv6NGlE';
-  const exportUrl = `https://docs.google.com/document/d/${resumeDocId}/export?format=pdf`;
+  const exportUrl = `https://docs.google.com/document/d/1v5nZxfUj-xEWa6y6tGkDxbKazJr8m_YJXcv1NPbqBxU/edit?usp=sharing`;
 
   const handleDownloadResume = async (e) => {
     e.preventDefault();

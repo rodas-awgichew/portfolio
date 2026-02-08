@@ -88,7 +88,7 @@ const Home = () => {
           <a href="mailto:rodas.awgichew21@gmail.com"><FaEnvelope /></a>
         </div>
 
-        <a href="https://docs.google.com/document/d/1KZexvDrkUOT5X6wLbtXNyWc0ofv6NGlE/edit" className="resume-btn">View Resume</a>
+        <a href="https://docs.google.com/document/d/1v5nZxfUj-xEWa6y6tGkDxbKazJr8m_YJXcv1NPbqBxU/edit?usp=sharing" className="resume-btn">View Resume</a>
       </div>
 
       <div className="scroll-indicator">
