@@ -24,11 +24,6 @@ Welcome to the **Portfolio** repository! This project serves as a showcase of my
 - **Deployment:**  
   - Vercel
 
-
-## Contributing
-
-This portfolio is personalized, but suggestions and improvements are welcome! Feel free to open an issue or submit a pull request.
-
 ---
 
 **Contact:**  
