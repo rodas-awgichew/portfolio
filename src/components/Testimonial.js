@@ -2,6 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Testimonial.css";
 
 const testimonials = [
+  
+    {
+    name: "Munawar Hayat",
+    role: "Accounting consultant",
+    quote:
+      "She is really a nice lady and very professional as well. She actually did a great job. I recommend her if you wanted a professional landing page or website.",
+    image: "/PIC3.webp",
+  },
   {
     name: "Sador T.",
     role: "Health Advocate",
@@ -22,13 +30,6 @@ const testimonials = [
     quote:
       "Rodas brings clarity, creativity, and purpose to every interface she touches. Her growth is inspiring.",
     image: "/pic1.jpg",
-  },
-  {
-    name: "Mikiyas K.",
-    role: "Software Engineer",
-    quote:
-      "Her designs balance beauty with usability — truly a professional approach that stands out.",
-    image: "/PIC3.webp",
   },
   {
     name: "Biruk Y.",
