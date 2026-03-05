@@ -10,19 +10,21 @@ const Projects = () => {
         "Empowering women through education, early screening, and personalized health insights.",
       link: "https://luna-health-349o3k7dg-sadorras-projects.vercel.app/",
     },
-    {
-      img: "/movieApp.png",
-      title: "Movie Explorer",
-      description:
-        "Dynamic movie browsing with API integration and real-time search.",
-      link: "https://movie-app-beryl-eight-59.vercel.app/",
-    },
+
     {
       img: "/image.png",
       title: "Crypto",
       description:
         "A modern web application project aimed at revolutionizing digital finance through secure, transparent, and decentralized blockchain solutions.",
       link: "https://crypto-rho-ochre.vercel.app/",
+    },
+
+    {
+      img: "/pic7.png",
+      title: "AI Archivist",
+      description:
+        "Second Brain is web app with Firebase authentication/storage and LLM-powered chat.",
+      link: "https://second-brain-ai-archivist.vercel.app/",
     },
     {
       img: "/buddy.png",
