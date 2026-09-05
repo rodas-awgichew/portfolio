@@ -5,7 +5,7 @@ Welcome to the **Portfolio** repository! This project serves as a showcase of my
 ## Features
 
 - **Responsive Design:** Adapts seamlessly to different screen sizes for optimal viewing on desktop, tablet, and mobile devices.
-- **Project Showcase:** Displays a curated list of projects with descriptions, tech stacks, and links to live demos or repositories.
+- **Project Showcase:** Displays a curated list of projects with descriptions, tech stacks, and links to live demos.
 - **About Me Section:** Shares a brief biography, skills, and experience highlights.
 - **Contact Form:** Allows visitors to get in touch directly through the website.
 - **Downloadable Resume:** Offers an option to download a PDF version of my resume.
