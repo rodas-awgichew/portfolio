@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
-  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState(null);
+  const [toastType, setToastType] = useState("success");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const elements = document.querySelectorAll("[data-animate]");
@@ -19,24 +21,36 @@ const Contact = () => {
     return () => elements.forEach((el) => observer.unobserve(el));
   }, []);
 
+  const triggerToast = (message, type = "success") => {
+    setToastMessage(message);
+    setToastType(type);
+    setTimeout(() => {
+      setToastMessage(null);
+    }, 4500);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
+
+    // TODO: Replace these with your actual active credentials from your EmailJS dashboard
+    const SERVICE_ID = "service_aluh0dh"; 
+    const TEMPLATE_ID = "template_d6xlnqh";
+    const PUBLIC_KEY = "KEWEJc1fwZ6TTZWTE";
 
     emailjs
-      .sendForm(
-        "service_aluh0dh",
-        "template_d6xlnqh",
-        e.target,
-        "KEWEJc1fwZ6TTZWTE"
-      )
+      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
       .then(
         () => {
-          setShowToast(true);
-          setTimeout(() => setShowToast(false), 3000);
+          setIsLoading(false);
+          triggerToast("✅ Message sent successfully! I'll get back to you soon.", "success");
           e.target.reset();
         },
         (error) => {
-          alert("Failed to send message: " + error.text);
+          setIsLoading(false);
+          console.error("EmailJS Error Details:", error);
+          // User-friendly text displayed on screen instead of raw code crashes
+          triggerToast("⚠️️ Sorry, something went wrong and your message couldn't be sent. Please try emailing me directly!", "error");
         }
       );
   };
@@ -66,11 +80,17 @@ const Contact = () => {
             <textarea name="message" rows="5" placeholder="Your message" required></textarea>
           </div>
 
-          <button type="submit">Send Message</button>
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? "Sending..." : "Send Message"}
+          </button>
         </form>
       </div>
 
-      {showToast && <div className="toast">✅ Message sent successfully!</div>}
+      {toastMessage && (
+        <div className={`toast ${toastType}`}>
+          {toastMessage}
+        </div>
+      )}
     </section>
   );
 };
