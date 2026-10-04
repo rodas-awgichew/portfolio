@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiTypescript, SiFigma } from "react-icons/si";
 import "./Home.css";
-const Home = () => {
-  const texts = [
-    "I’m Rodas Awgichew",
-    "Full Stack Developer",
-    "UI/UX Designer"
-  ];
 
+const texts = [
+  "I’m Rodas Awgichew",
+  "Full Stack Developer",
+  "UI/UX Designer"
+];
+
+const Home = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
