@@ -5,7 +5,7 @@ import "./Home.css";
 const Home = () => {
   const texts = [
     "I’m Rodas Awgichew",
-    "Front-End Developer",
+    "Full Stack Developer",
     "UI/UX Designer"
   ];
 

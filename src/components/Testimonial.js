@@ -32,10 +32,10 @@ const testimonials = [
     image: "/pic1.jpg",
   },
   {
-    name: "Biruk Y.",
-    role: "Designer",
+    name: "Dawit A.",
+    role: "upwork client",
     quote:
-      "She has a rare mix of creativity and precision. Every interface feels intentional and human.",
+      "Rodas was fantastic to work with! She understood what we needed right away and delivered great results. Communication was smooth and she made the whole process stress-free. I'd gladly hire her again! She has a rare mix of creativity and precision. Every interface feels intentional and human.",
     image: "/pic4.webp",
   },
 ];
